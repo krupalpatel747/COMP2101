@@ -127,7 +127,7 @@ EOF
   echo "this is task 2, we are catching interface names through for command"
   for(( count=1; count < 10; count++)); do
     echo "the list of $count interface of thhis machine is below"
-    ip link show | grep $count: | awk '{print $2}'
+    ip link show | grep $count: | awk '{print $1 $2}'
   done
 
   #####
