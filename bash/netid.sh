@@ -122,7 +122,19 @@ EOF
   Network Name    : $network_name
 
   "
+  ###############task 2 task 2 task 2 #######################################
+#here i use ip link show command to list all the interface name and sort the output through grep and awk command to print out just the names of interface
+  echo "this is task 2, we are catching interface names through for command"
+  for(( count=1; count < 10; count++)); do
+    echo "the list of $count interface of thhis machine is below"
+    ip link show | grep $count: | awk '{print $1 $2}'
+  done
 
   #####
   # End of per-interface report
+  ###
+
+
   #####
+  # End of per-interface report
+  
