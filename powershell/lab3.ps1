@@ -1,0 +1,1 @@
+get-ciminstance win32_networkadapterconfiguration | where-object ipenabled -eq True | select-object Index,Description,ipaddress,IPSubnet,DNSDomain,DNSServerSearchOrder | format-list *
